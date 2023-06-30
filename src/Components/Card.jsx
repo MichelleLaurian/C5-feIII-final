@@ -10,8 +10,6 @@ const Card = ({ data }) => {
   const [favorite, setFavorite] = useState("")
 
   const addFav = () => {
-    // Aqui iria la logica para agregar la Card en el localStorage
-
     if (!favState.favs.includes(data)) {
       favDispatch({ type: 'LIKE', payload: data })
       setFavorite("LIKE")
@@ -33,7 +31,7 @@ const Card = ({ data }) => {
             <strong>
               {data.name}
             </strong>
-            <p>{data.username}</p>
+            {data.username}
           </div>
         </Link>
         <div>
